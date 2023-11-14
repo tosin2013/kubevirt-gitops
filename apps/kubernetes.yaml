@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: apps/overlays/kubernetes
-    repoURL: https://github.com/cwilkers/kubevirt-gitops.git
+    repoURL: https://github.com/tosin2013/kubevirt-gitops.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
