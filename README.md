@@ -54,6 +54,7 @@ The [vms](vms) directory works with the DataVolumes provided in
 The [win2k19](win2k19) directory holds an application and manifests for
 creating a boot source image of a Microsoft Windows 2019 Server VM.
 
+Link: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
 This application requires a MS Windows 2019 Server installation ISO be
 downloaded and shared using a local web service accessible only to the cluster.
 The URL for the ISO is found in [install-iso.yaml](win2k19/install-iso.yaml)
