@@ -16,7 +16,7 @@ metadata:
     app: fedora-gitops1
     vm.kubevirt.io/template: fedora-server-small
     vm.kubevirt.io/template.revision: "1"
-    vm.kubevirt.io/template.version: v0.14.0
+    vm.kubevirt.io/template.version: v0.26.0
   name: fedora-gitops1
 spec:
   dataVolumeTemplates:
@@ -65,7 +65,7 @@ spec:
           networkInterfaceMultiqueue: true
           rng: {}
         machine:
-          type: pc-q35-rhel8.4.0
+          type: pc-q35-rhel9.2.0
         resources:
           requests:
             memory: 4Gi
