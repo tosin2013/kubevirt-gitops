@@ -11,7 +11,7 @@ spec:
   source:
     path: apps/overlays/openshift
     repoURL: https://github.com/tosin2013/kubevirt-gitops.git
-    targetRevision: HEAD
+    targetRevision: main
   syncPolicy:
     automated: {}
     syncOptions:
