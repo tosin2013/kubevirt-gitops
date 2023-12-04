@@ -33,14 +33,14 @@ spec:
             storage: 30Gi
       source:
         pvc:
-          name: centos8
+          name: centos8-custom
           namespace: openshift-virtualization-os-images
   running: true
   template:
     metadata:
       annotations:
         vm.kubevirt.io/flavor: small
-        vm.kubevirt.io/os: centos8-custom
+        vm.kubevirt.io/os: centos8
         vm.kubevirt.io/workload: server
       labels:
         kubevirt.io/domain: centos-gitops1
