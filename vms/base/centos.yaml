@@ -40,7 +40,7 @@ spec:
     metadata:
       annotations:
         vm.kubevirt.io/flavor: small
-        vm.kubevirt.io/os: centos8
+        vm.kubevirt.io/os: centos8-custom
         vm.kubevirt.io/workload: server
       labels:
         kubevirt.io/domain: centos-gitops1
