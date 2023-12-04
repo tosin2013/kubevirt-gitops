@@ -21,6 +21,20 @@ This script will:
 
 More in-depth descriptions may be found in the [README](setup/)
 
+## Tested on OpenShift 4.14
+
+## Quick Start
+**Deploy OpenShift Resources**
+```
+oc apply -k apps/overlays/openshift
+```
+
+**Deploy Windows Application Workload**
+```
+oc apply -k apps/overlays/windows
+```
+
+
 ## Application Directories
 
 Other directories in this repository are designed to support Applications in ArgoCD. Each of these directories
