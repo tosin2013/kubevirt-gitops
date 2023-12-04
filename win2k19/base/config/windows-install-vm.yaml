@@ -69,10 +69,11 @@ spec:
       name: windows-install-rootdisk
     spec:
       pvc:
+        volumeMode: Block
         accessModes:
         - ReadWriteMany
         resources:
           requests:
-            storage: 22Gi
+            storage: 30Gi
       source:
         blank: {}
