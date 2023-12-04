@@ -26,6 +26,7 @@ spec:
       name: centos-gitops1
     spec:
       pvc:
+        volumeMode: Block
         accessModes:
         - ReadWriteMany
         resources:
