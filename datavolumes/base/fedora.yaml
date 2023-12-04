@@ -12,7 +12,7 @@ spec:
     resources:
       requests:
         storage: 20Gi
-    volumeMode: Filesystem
+    volumeMode: Block
     storageClassName: ocs-storagecluster-ceph-rbd
   source:
     http:
