@@ -16,4 +16,4 @@ spec:
     volumeMode: Filesystem
   source:
     http:
-      url: http://192.168.130.64:8080/win2k19.iso
+      url: http://192.168.130.84:8080/win2k19.iso
