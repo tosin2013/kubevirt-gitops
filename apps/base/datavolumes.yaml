@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: datavolumes
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   destination:
     namespace: kubevirt-os-images
@@ -12,7 +12,7 @@ spec:
   source:
     path: datavolumes/overlays/kubernetes
     repoURL: https://github.com/tosin2013/kubevirt-gitops.git
-    targetRevision: HEAD
+    targetRevision: rosa
   syncPolicy:
     automated: {}
     syncOptions:

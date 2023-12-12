@@ -1,22 +1,7 @@
-
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vms
-  annotations:
-    argocd.argoproj.io/sync-wave: "5"
+  name: vms'
 spec:
-  destination:
-    server: https://kubernetes.default.svc
-  project: default
   source:
     path: vms/overlays/openshift
-    repoURL: https://github.com/tosin2013/kubevirt-gitops.git
-    targetRevision: rosa
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
-    syncOptions:
-    - CreateNamespace=true
-

@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: win2k19
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   destination:
     namespace: ""
@@ -12,7 +12,7 @@ spec:
   source:
     path: win2k19/overlays/kubernetes
     repoURL: https://github.com/tosin2013/kubevirt-gitops.git
-    targetRevision: HEAD
+    targetRevision: rosa
   syncPolicy:
     syncOptions:
     - CreateNamespace=false
