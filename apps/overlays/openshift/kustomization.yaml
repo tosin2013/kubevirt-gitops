@@ -3,10 +3,12 @@ kind: Kustomization
 namespace: openshift-gitops
 
 resources:
-- ocpvirt.yaml
 - ../../base/
 
 patchesStrategicMerge:
+- openshift-data-foundation-operator.yaml
+- openshift-data-foundation-instance.yaml
+- ocpvirt.yaml
 - datavolumes-application.yaml
 - vms-application.yaml
 - win2k19-application.yaml
