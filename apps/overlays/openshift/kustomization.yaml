@@ -6,6 +6,7 @@ resources:
 - openshift-data-foundation-operator.yaml
 - openshift-data-foundation-instance.yaml
 - ocpvirt.yaml
+- httpd-server.yaml
 - ../../base/
 
 patchesStrategicMerge:

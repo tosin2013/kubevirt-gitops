@@ -1,0 +1,23 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpd-server
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+spec:
+  destination:
+    namespace: httpd-server
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: httpd-server/overlays/default
+    repoURL: https://github.com/tosin2013/kubevirt-gitops.git
+    targetRevision: rosa
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
