@@ -75,6 +75,8 @@ The URL for the ISO is found in [install-iso.yaml](win2k19/install-iso.yaml)
 and should be changed for the local environment. Alternatively, the ISO may be
 manually uploaded to the kubevirt-gitops namespace as a DV, and the
 install-iso.yaml entry removed from
+See [httpd-server docs](httpd-server/README.md) for more information. on how to configure the httpd-server. For the win2k19.iso to be available for the VM.
+
 [kustomization.yaml](win2k19/kustomization.yaml).
 
 Installation scripts can be found in [config](win2k19/config), including a job
