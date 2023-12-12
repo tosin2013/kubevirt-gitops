@@ -13,8 +13,8 @@ spec:
   project: default
   source:
     path: gitops/cluster-config/openshift-data-foundation-operator/operator/overlays/stable-4.12
-    repoURL:  https://github.com/tosin2013/sno-quickstarts.git
-    targetRevision: main
+    repoURL:  https://github.com/tosin2013/kubevirt-gitops.git
+    targetRevision: rosa
   syncPolicy:
     automated:
       prune: false

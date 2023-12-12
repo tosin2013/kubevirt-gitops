@@ -1,3 +1,4 @@
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -7,6 +8,15 @@ metadata:
 spec:
   destination:
     namespace: openshift-virtualization-os-images
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: datavolumes/overlays/openshift
+    repoURL: https://github.com/tosin2013/kubevirt-gitops.git
+    targetRevision: rosa
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

@@ -12,7 +12,7 @@ spec:
   source:
     path: virtualization
     repoURL: https://github.com/tosin2013/kubevirt-gitops.git
-    targetRevision: HEAD
+    targetRevision: rosa
   syncPolicy:
     automated: {}
     syncOptions:
