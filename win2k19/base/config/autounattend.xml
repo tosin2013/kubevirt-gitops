@@ -78,21 +78,49 @@
     </settings>
     <settings pass="oobeSystem">
         <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <UserAccounts>
-                <AdministratorPassword>
-                    <Value>QQBhADEAMgAzADQANQA2AEEAZABtAGkAbgBpAHMAdAByAGEAdABvAHIAUABhAHMAcwB3AG8AcgBkAA==</Value>
-                    <PlainText>false</PlainText>
-                </AdministratorPassword>
-	        </UserAccounts>
-	    	<AutoLogon>
-                <Password>
-                    <Value>QQBhADEAMgAzADQANQA2AFAAYQBzAHMAdwBvAHIAZAA=</Value>
-                    <PlainText>false</PlainText>
-                </Password>
-                <Enabled>true</Enabled>
-                <LogonCount>1</LogonCount>
-                <Username>Administrator</Username>
-		    </AutoLogon>
+            <?xml version="1.0" encoding="utf-8"?>
+            <unattend xmlns="urn:schemas-microsoft-com:unattend">
+                <settings pass="windowsPE">
+                    <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <!-- Existing code... -->
+                    </component>
+                    <!-- Existing code... -->
+                </settings>
+                <settings pass="oobeSystem">
+                    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    </component>
+                </settings>
+                <settings pass="specialize">
+                    <component name="Microsoft-Windows-UnattendedJoin" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <Identification>
+                            <Credentials>
+                                <Password>MyP@ssw0rd</Password>
+                                <Username>user1</Username>
+                            </Credentials>
+                        </Identification>
+                    </component>
+                </settings>
+                <settings pass="oobeSystem">
+                    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <UserAccounts>
+                            <AdministratorPassword>
+                                <Value>QQBhADEAMgAzADQANQA2AEEAZABtAGkAbgBpAHMAdAByAGEAdABvAHIAUABhAHMAcwB3AG8AcgBkAA==</Value>
+                                <PlainText>true</PlainText>
+                            </AdministratorPassword>
+                        </UserAccounts>
+                        <AutoLogon>
+                            <Password>
+                                <Value>TE9HK05QQFMkVzJAMyVzUkM0UkMwM0QkNQ==</Value>
+                                <PlainText>true</PlainText>
+                            </Password>
+                            <Enabled>true</Enabled>
+                            <LogonCount>1</LogonCount>
+                            <Username>Administrator</Username>
+                        </AutoLogon>
+                    </component>
+                </settings>
+                <cpi:offlineImage cpi:source="wim:c:/users/administrator/documents/install.wim#Windows Server 2019 SERVERSTANDARD" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+            </unattend>
             <FirstLogonCommands>
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>powershell -ExecutionPolicy ByPass Invoke-Expression (Invoke-WebRequest -Uri http://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1)</CommandLine>
@@ -106,6 +134,12 @@
                     <Order>2</Order>
 		            <Description>Post Installation Script</Description>
 		        </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>net localgroup Administrators /add user1</CommandLine>
+                    <Order>3</Order>
+                    <Description>Add user1 to Administrators group</Description>
+                    <RequiresUserInput>false</RequiresUserInput>
+                </SynchronousCommand>
             </FirstLogonCommands>
         </component>
 </settings>
