@@ -65,6 +65,8 @@ The [vms](vms) directory works with the DataVolumes provided in
 
 ### Microsoft Windows 2019 Server Install from ISO
 
+Windows `Administrator` default password `Aa123456Password`
+
 The [win2k19](win2k19) directory holds an application and manifests for
 creating a boot source image of a Microsoft Windows 2019 Server VM.
 
