@@ -23,6 +23,9 @@ More in-depth descriptions may be found in the [README](setup/)
 
 ## Tested on OpenShift 4.14
 
+TO-DO
+* fix user password in autounattend.xml
+
 ## Quick Start
 **Deploy OpenShift Resources**
 ```
