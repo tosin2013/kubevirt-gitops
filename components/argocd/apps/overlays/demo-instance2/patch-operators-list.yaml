@@ -1,3 +1,4 @@
+- op: add
   path: /spec/generators/0/list/elements
   value:
     - cluster: local

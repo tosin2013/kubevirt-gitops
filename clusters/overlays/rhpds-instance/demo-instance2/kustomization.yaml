@@ -5,7 +5,7 @@ namespace: openshift-gitops
 
 resources:
   - ../../../base
-  - ../../../../components/argocd/apps/overlays/datacenter-1/qa
+  - ../../../../components/argocd/apps/overlays/demo-instance2
 
 patches:
   - path: patch-applicationset-repo-revision.yaml
