@@ -4,15 +4,24 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
-        name: win2k19
-        path: components/vm-workloads/win2k19/overlays/openshift
+        name: httpd
+        path: components/dependencies/httpd-server/overlays/default
+        namespace: kubevirt-gitops
     - cluster: local
       url: https://kubernetes.default.svc
       values:
         name: datavolumes
         path: components/vm-workloads/datavolumes/overlays/openshift
+        namespace: kubevirt-gitops
     - cluster: local
       url: https://kubernetes.default.svc
       values:
         name: vms
         path: components/vm-workloads/vms/overlays/openshift
+        namespace: kubevirt-gitops
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: win2k19
+        path: components/vm-workloads/win2k19/overlays/openshift
+        namespace: kubevirt-gitops

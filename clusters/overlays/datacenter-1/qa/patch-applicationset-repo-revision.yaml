@@ -6,4 +6,4 @@
   value: main
 - op: replace
   path: /metadata/name
-  value: cluster-operators-applicationset-datacenter-1-qa
+  value: cluster-operators-applicationset-qa
