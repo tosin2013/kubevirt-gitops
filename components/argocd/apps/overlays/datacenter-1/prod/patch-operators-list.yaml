@@ -11,3 +11,8 @@
       values:
         name: datavolumes
         path: components/vm-workloads/datavolumes/overlays/openshift
+    - cluster: local
+      url: https://api.ocp4.example.com:6443
+      values:
+        name: vms
+        path: components/vm-workloads/vms/overlays/openshift
