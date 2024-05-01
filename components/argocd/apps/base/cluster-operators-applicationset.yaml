@@ -35,4 +35,4 @@ spec:
         path: '{{values.path}}'
       destination:
         server: '{{ url }}'
-        namespace: openshift-gitops
+        namespace: '{{ values.namespace }}'
