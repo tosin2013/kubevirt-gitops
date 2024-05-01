@@ -10,4 +10,4 @@
       url: https://api.lab.hs8kk.sandbox446.opentlc.com:6443
       values:
         name: datavolumes
-        path: ccomponents/vm-workloads/datavolumes/overlays/openshift
+        path: components/vm-workloads/datavolumes/overlays/openshift
