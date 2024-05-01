@@ -1,0 +1,13 @@
+- op: add
+  path: /spec/generators/0/list/elements
+  value:
+    - cluster: local
+      url: https://api.lab.abcde.sandbox111.opentlc.com:6443
+      values:
+        name: win2k19
+        path: components/vm-workloads/win2k19/overlays/openshift
+    - cluster: local
+      url: https://api.lab.abcde.sandbox111.opentlc.com:6443
+      values:
+        name: datavolumes
+        path: components/vm-workloads/datavolumes/overlays/openshift

@@ -1,0 +1,12 @@
+- op: replace
+  path: /spec/source/repoURL
+  value: 'https://github.com/tosin2013/kubevirt-gitops.git'
+- op: replace
+  path: /spec/source/targetRevision
+  value: main
+- op: replace
+  path: /spec/destination/server
+  value: https://api.lab.abcde.sandbox000.opentlc.com:6443
+- op: replace
+  path: /metadata/name
+  value: cluster-config-app-of-apps-demo1
