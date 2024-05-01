@@ -2,12 +2,12 @@
   path: /spec/generators/0/list/elements
   value:
     - cluster: local
-      url: https://kubernetes.default.svc
+      url: https://api.ocp4.qa.example.com:6443
       values:
         name: win2k19
         path: components/vm-workloads/win2k19/overlays/openshift
     - cluster: local
-      url: https://kubernetes.default.svc
+      url: https://api.ocp4.qa.example.com:6443
       values:
         name: datavolumes
         path: components/vm-workloads/datavolumes/overlays/openshift
