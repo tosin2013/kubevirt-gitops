@@ -34,5 +34,5 @@ spec:
         targetRevision: patch-me-see-clusters-overlays
         path: '{{values.path}}'
       destination:
-        server: https://kubernetes.default.svc
+        server: '{{ url }}'
         namespace: openshift-gitops

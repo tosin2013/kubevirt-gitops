@@ -4,8 +4,8 @@ kind: Kustomization
 namespace: openshift-gitops
 
 resources:
-  - ../../base
-  - ../../../components/argocd/apps/overlays/rhdp-4.12-ships
+  - ../../../base
+  - ../../../../components/argocd/apps/overlays/datacenter-1/dev 
 
 patches:
   - path: patch-applicationset-repo-revision.yaml
