@@ -37,7 +37,7 @@ spec:
         pvc:
           name: fedora-custom
           namespace: openshift-virtualization-os-images
-  running: false
+  running: true
   template:
     metadata:
       annotations:
@@ -50,7 +50,7 @@ spec:
     spec:
       domain:
         cpu:
-          cores: 2
+          cores: 4
           sockets: 1
           threads: 1
         devices:
