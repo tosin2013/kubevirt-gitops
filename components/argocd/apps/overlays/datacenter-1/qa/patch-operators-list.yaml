@@ -4,24 +4,24 @@
     - cluster: local
       url: https://api.ocp4.qa.example.com:6443
       values:
-        name: httpd
+        name: httpd-qa
         path: components/dependencies/httpd-server/overlays/default
         namespace: kubevirt-gitops
     - cluster: local
       url: https://api.ocp4.qa.example.com:6443
       values:
-        name: datavolumes
+        name: datavolumes-qa
         path: components/vm-workloads/datavolumes/overlays/openshift
         namespace: kubevirt-gitops
     - cluster: local
       url: https://api.ocp4.qa.example.com:6443
       values:
-        name: vms
+        name: vms-qa
         path: components/vm-workloads/vms/overlays/openshift
         namespace: kubevirt-gitops
     - cluster: local
       url: https://api.ocp4.qa.example.com:6443
       values:
-        name: win2k19
+        name: win2k19-qa
         path: components/vm-workloads/win2k19/overlays/openshift
         namespace: kubevirt-gitops

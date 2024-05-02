@@ -4,24 +4,24 @@
     - cluster: local
       url: https://api.lab.abcde.sandbox000.opentlc.com:6443
       values:
-        name: httpd
+        name: httpd-demo2
         path: components/dependencies/httpd-server/overlays/default
         namespace: kubevirt-gitops
     - cluster: local
       url: https://api.lab.abcde.sandbox000.opentlc.com:6443
       values:
-        name: datavolumes
+        name: datavolumes-demo2
         path: components/vm-workloads/datavolumes/overlays/openshift
         namespace: kubevirt-gitops
     - cluster: local
       url: https://api.lab.abcde.sandbox000.opentlc.com:6443
       values:
-        name: vms
+        name: vms-demo2
         path: components/vm-workloads/vms/overlays/openshift
         namespace: kubevirt-gitops
     - cluster: local
       url: https://api.lab.abcde.sandbox000.opentlc.com:6443
       values:
-        name: win2k19
+        name: win2k19-demo2
         path: components/vm-workloads/win2k19/overlays/openshift
         namespace: kubevirt-gitops
