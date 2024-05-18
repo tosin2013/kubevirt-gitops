@@ -9,7 +9,6 @@ oc apply -k httpd-server/overlays/default
 **Windows Server 2019 Download location**
 https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
 
-
 **Download Example**
 ```
 URL_LOCATION="https://go.microsoft.com/fwlink/p/?LinkID=xxXxXxXx&clcid=0x409&culture=en-us&country=US"
