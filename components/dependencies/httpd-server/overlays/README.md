@@ -6,9 +6,13 @@
 oc apply -k httpd-server/overlays/default
 ```
 
+**Deploy using URL**
+```
+oc apply -k https://github.com/tosin2013/kubevirt-gitops/components/dependencies/httpd-server/overlays/default
+```
+
 **Windows Server 2019 Download location**
 https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019
-
 
 **Download Example**
 ```
