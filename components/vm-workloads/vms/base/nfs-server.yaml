@@ -13,10 +13,10 @@ metadata:
         }
       ]
   labels:
-    app: centos-gitops1
-    vm.kubevirt.io/template: centos8-server-small
+    app: rhel9-nfs-server
+    vm.kubevirt.io/template: rhel9-server
     vm.kubevirt.io/template.revision: "1"
-    vm.kubevirt.io/template.version: v0.14.0
+    vm.kubevirt.io/template.version: v0.1.0
   name: centos-gitops1
 spec:
   dataVolumeTemplates:
@@ -31,11 +31,11 @@ spec:
         - ReadWriteMany
         resources:
           requests:
-            storage: 30Gi
-      source:
-        pvc:
-          name: centos8-custom
-          namespace: openshift-virtualization-os-images
+            storage: 100Gi
+      sourceRef:
+        kind: DataSource
+        name: rhel9
+        namespace: openshift-virtualization-os-images
   running: true
   template:
     metadata:
