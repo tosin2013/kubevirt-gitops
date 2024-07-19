@@ -85,4 +85,9 @@ spec:
             user: centos
             password: 30jt-pghb-jj0i
             chpasswd: { expire: False }
+            packages:
+              - nfs-utils
+            runcmd:
+              - systemctl enable nfs-server
+              - systemctl start nfs-server
         name: cloudinitdisk
