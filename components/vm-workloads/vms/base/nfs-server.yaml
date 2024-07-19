@@ -82,12 +82,7 @@ spec:
       - cloudInitNoCloud:
           userData: |-
             #cloud-config
-            user: root
-            password: 30jt-pghb-jj0i
+            user: cloud-user
+            password: c84l-py8i-d2jh
             chpasswd: { expire: False }
-            packages:
-              - nfs-utils
-            runcmd:
-              - systemctl enable nfs-server
-              - systemctl start nfs-server
         name: cloudinitdisk
