@@ -82,12 +82,21 @@ spec:
       - cloudInitNoCloud:
           userData: |-
             #cloud-config
-            user: cloud-user
-            password: c84l-py8i-d2jh
-            chpasswd: { expire: False }
+            package_update: true
             packages:
               - nfs-utils
             runcmd:
-              - systemctl enable nfs-server
-              - systemctl start nfs-server
+              - mkdir -p /srv/nfs/kubedata
+              - chown nfsnobody:nfsnobody /srv/nfs/kubedata
+              - chmod 755 /srv/nfs/kubedata
+              - echo '/srv/nfs/kubedata *(rw,sync,no_subtree_check,no_root_squash)' >> /etc/exports
+              - systemctl enable nfs-server rpcbind nfs-lock nfs-idmap
+              - systemctl start nfs-server rpcbind nfs-lock nfs-idmap
+              - firewall-cmd --permanent --add-service=nfs
+              - firewall-cmd --permanent --add-service=rpc-bind
+              - firewall-cmd --permanent --add-service=mountd
+              - firewall-cmd --reload
+            user: cloud-user
+            password: c84l-py8i-d2jh
+            chpasswd: { expire: False }
         name: cloudinitdisk
