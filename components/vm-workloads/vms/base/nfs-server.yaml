@@ -44,7 +44,7 @@ spec:
         vm.kubevirt.io/os: rhel9
         vm.kubevirt.io/workload: server
       labels:
-        kubevirt.io/domain: centos-gitops1
+        kubevirt.io/domain: rhel9-nfs-server
         kubevirt.io/size: small
     spec:
       domain:
@@ -56,7 +56,7 @@ spec:
           disks:
           - disk:
               bus: virtio
-            name: centos-gitops1
+            name: rhel9-nfs-server
           - disk:
               bus: virtio
             name: cloudinitdisk
@@ -66,7 +66,7 @@ spec:
           networkInterfaceMultiqueue: true
           rng: {}
         machine:
-          type: pc-q35-rhel9.0.0
+          type: pc-q35-rhel9.2.0
         resources:
           requests:
             memory: 2Gi
@@ -77,8 +77,8 @@ spec:
       terminationGracePeriodSeconds: 180
       volumes:
       - dataVolume:
-          name: centos-gitops1
-        name: centos-gitops1
+          name: rhel9-nfs-server
+        name: rhel9-nfs-server
       - cloudInitNoCloud:
           userData: |-
             #cloud-config
