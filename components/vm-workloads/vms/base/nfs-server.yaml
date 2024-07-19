@@ -23,7 +23,7 @@ spec:
   - apiVersion: cdi.kubevirt.io/v1beta1
     kind: DataVolume
     metadata:
-      name: centos-gitops1
+      name: rhel9-nfs-server
     spec:
       pvc:
         volumeMode: Block
