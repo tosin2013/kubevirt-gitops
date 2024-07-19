@@ -17,7 +17,7 @@ metadata:
     vm.kubevirt.io/template: rhel9-server
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.1.0
-  name: centos-gitops1
+  name: rhel9-nfs-server
 spec:
   dataVolumeTemplates:
   - apiVersion: cdi.kubevirt.io/v1beta1
@@ -41,7 +41,7 @@ spec:
     metadata:
       annotations:
         vm.kubevirt.io/flavor: small
-        vm.kubevirt.io/os: centos8
+        vm.kubevirt.io/os: rhel9
         vm.kubevirt.io/workload: server
       labels:
         kubevirt.io/domain: centos-gitops1
@@ -66,7 +66,7 @@ spec:
           networkInterfaceMultiqueue: true
           rng: {}
         machine:
-          type: pc-q35-rhel8.4.0
+          type: pc-q35-rhel9.0.0
         resources:
           requests:
             memory: 2Gi
