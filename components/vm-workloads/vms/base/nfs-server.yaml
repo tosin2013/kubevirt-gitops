@@ -82,7 +82,7 @@ spec:
       - cloudInitNoCloud:
           userData: |-
             #cloud-config
-            user: centos
+            user: root
             password: 30jt-pghb-jj0i
             chpasswd: { expire: False }
             packages:
