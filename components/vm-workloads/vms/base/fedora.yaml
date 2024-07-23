@@ -50,7 +50,7 @@ spec:
     spec:
       domain:
         cpu:
-          cores: 4
+          cores: 2
           sockets: 1
           threads: 1
         devices:
@@ -68,10 +68,10 @@ spec:
           networkInterfaceMultiqueue: true
           rng: {}
         machine:
-          type: pc-q35-rhel9.2.0
+          type: pc-q35-rhel9.4.0
         resources:
           requests:
-            memory: 4Gi
+            memory: 2Gi
       evictionStrategy: LiveMigrate
       networks:
       - name: default
@@ -80,7 +80,7 @@ spec:
       volumes:
       - dataVolume:
           name: fedora-gitops1
-        name: fedora-gitops1
+        name: rootdisk
       - cloudInitConfigDrive:
           userData: |-
             #cloud-config

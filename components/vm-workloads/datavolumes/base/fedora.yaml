@@ -16,4 +16,4 @@ spec:
     storageClassName: ocs-storagecluster-ceph-rbd
   source:
     http:
-      url: https://download.fedoraproject.org/pub/fedora/linux/releases/39/Cloud/aarch64/images/Fedora-Cloud-Base-39-1.5.aarch64.raw.xz
+      url: https://southfront.mm.fcix.net/fedora/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2

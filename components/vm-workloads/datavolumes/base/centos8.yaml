@@ -16,5 +16,5 @@ spec:
     storageClassName: ocs-storagecluster-ceph-rbd
   source:
     http:
-      url: https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-GenericCloud-8-20230501.0.x86_64.qcow2
+      url: https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-GenericCloud-8-latest.x86_64.qcow2
 
