@@ -88,6 +88,11 @@ namespace. A short script is provided at
 supplied by the repo. If any changes are made, run the script to regenerate the
 ConfigMap, and make sure to check in any changes for ArgoCD to see them.
 
+
+## To enable RHEL VMs to auto register see below 
+`Settings-> Guest Management -> Auto Register Automatic subscription of new RHEL VirtualMachines`
+![20240723165919](https://i.imgur.com/0OphjEq.png)
+
 ## Links:
 * [Using Red Hat Advanced Cluster Management and OpenShift GitOps to manage OpenShift Virtualization
 ](https://www.redhat.com/en/blog/using-red-hat-advanced-cluster-management-and-openshift-gitops-to-manage-openshift-virtualization)
